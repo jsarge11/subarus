@@ -36,12 +36,12 @@ export const Main = () => {
 
 	return (
 		<div className="bg-slate-500">
+			<p className="text-white ml-36 pt-10">Total: {sortedSubarus?.length}</p>
 			<SortingDropdown
 				selectedOption={selectedOption}
 				sortingOptions={sortingOptions}
 				onChange={handleSortChange}
 			/>
-
 			<div className="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{sortedSubarus.map((car, index) => (
 					<CarCard key={index} {...car} />

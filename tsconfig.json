@@ -8,7 +8,10 @@
 		"esModuleInterop": true,
 		"outDir": "serverjs",
 		"target": "es5",
-		"moduleResolution": "node"
+		"moduleResolution": "node",
+		"noEmitOnError": false,
+		"strict": false,
+		"skipLibCheck": true // skips type checking for node_modules
 	},
 	"include": ["src"],
 	"exclude": ["node_modules"]

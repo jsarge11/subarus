@@ -91,7 +91,9 @@ export type SortingValues =
 	| 'distance-asc'
 	| 'distance-desc';
 
-export interface SortingOption {
-	value: SortingValues;
+export type TrimNames = 'Sport' | 'Premium' | 'Limited' | 'Wilderness' | 'All';
+
+export interface DropdownOption {
+	value: string;
 	label: string;
 }

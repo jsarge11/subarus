@@ -1,10 +1,10 @@
 import { SortingValues, VehicleDetails } from './types';
 
-export const formatNumber = (num: number) => {
+export const formatNumber = (num: number): string => {
 	return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
 
-export const sortOnValue = (value: SortingValues, data: VehicleDetails[]) => {
+export const sortOnValue = (value: SortingValues, data: VehicleDetails[]): VehicleDetails[] => {
 	return data.sort((a, b) => {
 		if (value === 'mileage-asc') {
 			return a.mileage - b.mileage;
@@ -21,4 +21,12 @@ export const sortOnValue = (value: SortingValues, data: VehicleDetails[]) => {
 		}
 		return 0;
 	});
+};
+
+export const filterByTrim = (trim: string, data: VehicleDetails[]): VehicleDetails[] => {
+	if (trim === 'All' || !trim) {
+		return data;
+	}
+
+	return data.filter((car) => car.trimName === trim);
 };

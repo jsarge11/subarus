@@ -10,6 +10,7 @@ export const CarCard: React.FC<VehicleDetails> = ({
 	detailsUrl,
 	distance,
 	exteriorColor,
+	year,
 }) => {
 	return (
 		<a
@@ -21,6 +22,7 @@ export const CarCard: React.FC<VehicleDetails> = ({
 				<p className="text-gray-700 mb-2">Price: ${formatNumber(internetPrice)}</p>
 				<p className="text-gray-700 mb-2">Trim: {trimName}</p>
 				<p className="text-gray-700 mb-2">Distance: {distance} miles</p>
+				<p className="text-gray-700 mb-2">Year: {year}</p>
 				{exteriorColor && <p className="text-gray-700">Color: {exteriorColor?.name}</p>}
 			</div>
 		</a>
